@@ -173,10 +173,10 @@
 				4C196C771D691F7000C37264 /* XTYMapView.m */,
 				4C196C791D691FEF00C37264 /* XTYMapAnnotationItem.h */,
 				4C196C7A1D691FEF00C37264 /* XTYMapAnnotationItem.m */,
-				4C196C7C1D69245700C37264 /* XTYCoordinateItem.h */,
-				4C196C7D1D69245700C37264 /* XTYCoordinateItem.m */,
 				4C196C7F1D69266500C37264 /* CLLocation+XTYAddition.h */,
 				4C196C801D69266500C37264 /* CLLocation+XTYAddition.m */,
+				4C196C7C1D69245700C37264 /* XTYCoordinateItem.h */,
+				4C196C7D1D69245700C37264 /* XTYCoordinateItem.m */,
 			);
 			name = MapView;
 			sourceTree = "<group>";
@@ -542,6 +542,7 @@
 				4C196C6D1D691D7A00C37264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C196C6E1D691D7A00C37264 /* Build configuration list for PBXNativeTarget "XTYMapViewTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +551,7 @@
 				4C196C701D691D7A00C37264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C196C711D691D7A00C37264 /* Build configuration list for PBXNativeTarget "XTYMapViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +560,7 @@
 				4C196C731D691D7A00C37264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

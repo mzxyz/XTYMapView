@@ -13,6 +13,13 @@ typedef void(^DidSelectCallback)(id annotationView);
 typedef void(^DidDeselectCallback)(id annotationView);
 typedef void(^WillAddInMapViewCallback)(id annotationView,id annotation);
 
+@protocol XTYMapAnnotationItemProtocol <NSObject>
+
+- (void)setInfo:(id)info;
+- (void)setIndex:(NSInteger)index;
+
+@end
+
 @interface XTYMapAnnotationItem : NSObject
 
 @property (nonatomic, strong) Class annotationViewClass;

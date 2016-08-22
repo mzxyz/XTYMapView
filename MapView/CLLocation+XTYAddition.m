@@ -31,10 +31,12 @@
 
 + (CLLocation *)validLocationFromLat:(CLLocationDegrees)d_lat lng:(CLLocationDegrees)d_lng
 {
-    if (d_lat != 0 && [self isValidLatitude:d_lat] && d_lng != 0 &&[self isValidLongitude:d_lng]) {
+    if (d_lat != 0 && [self isValidLatitude:d_lat] && d_lng != 0 &&[self isValidLongitude:d_lng])
+    {
         CLLocation *l = [[CLLocation alloc] initWithLatitude:d_lat longitude:d_lng];
         return l;
     }
+    
     return nil;
 }
 
@@ -45,10 +47,12 @@
     double d_lat = [lat floatValue];
     double d_lng = [lng floatValue];
     
-    if ([self isValidLatitude:d_lat] && [self isValidLongitude:d_lng]) {
+    if ([self isValidLatitude:d_lat] && [self isValidLongitude:d_lng])
+    {
         CLLocation *l = [[CLLocation alloc] initWithLatitude:d_lat longitude:d_lng];
         return l;
     }
+    
     return nil;
 }
 

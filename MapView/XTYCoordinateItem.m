@@ -9,14 +9,7 @@
 #import "XTYCoordinateItem.h"
 
 @implementation XTYCoordinateItem
-
 @end
 
 @implementation XTYCoordinateListItem
-
-- (CLLocationCoordinate2D)coordinate2D
-{
-    return CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
-}
-
 @end
