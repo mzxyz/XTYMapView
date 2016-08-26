@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:XTYMapView.xcodeproj">
+      location = "self:XTYMapViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

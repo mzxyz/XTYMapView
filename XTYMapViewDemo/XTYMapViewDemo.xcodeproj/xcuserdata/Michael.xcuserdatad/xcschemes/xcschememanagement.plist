@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>XTYMapView.xcscheme</key>
+		<key>XTYMapViewDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4C196C3A1D691D7A00C37264</key>
+		<key>4CDEBDCC1D707CB000351DE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C196C561D691D7A00C37264</key>
+		<key>4CDEBDE51D707CB100351DE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C196C611D691D7A00C37264</key>
+		<key>4CDEBDF01D707CB100351DE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

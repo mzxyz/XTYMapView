@@ -1,8 +1,8 @@
 //
 //  main.m
-//  XTYMapView
+//  XTYMapViewDemo
 //
-//  Created by Michael on 16/8/21.
+//  Created by Michael on 16/8/27.
 //  Copyright © 2016年 Michael. All rights reserved.
 //
 

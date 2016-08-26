@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C196C3A1D691D7A00C37264"
-               BuildableName = "XTYMapView.app"
-               BlueprintName = "XTYMapView"
-               ReferencedContainer = "container:XTYMapView.xcodeproj">
+               BlueprintIdentifier = "4CDEBDCC1D707CB000351DE1"
+               BuildableName = "XTYMapViewDemo.app"
+               BlueprintName = "XTYMapViewDemo"
+               ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C196C561D691D7A00C37264"
-               BuildableName = "XTYMapViewTests.xctest"
-               BlueprintName = "XTYMapViewTests"
-               ReferencedContainer = "container:XTYMapView.xcodeproj">
+               BlueprintIdentifier = "4CDEBDE51D707CB100351DE1"
+               BuildableName = "XTYMapViewDemoTests.xctest"
+               BlueprintName = "XTYMapViewDemoTests"
+               ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C196C611D691D7A00C37264"
-               BuildableName = "XTYMapViewUITests.xctest"
-               BlueprintName = "XTYMapViewUITests"
-               ReferencedContainer = "container:XTYMapView.xcodeproj">
+               BlueprintIdentifier = "4CDEBDF01D707CB100351DE1"
+               BuildableName = "XTYMapViewDemoUITests.xctest"
+               BlueprintName = "XTYMapViewDemoUITests"
+               ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C196C3A1D691D7A00C37264"
-            BuildableName = "XTYMapView.app"
-            BlueprintName = "XTYMapView"
-            ReferencedContainer = "container:XTYMapView.xcodeproj">
+            BlueprintIdentifier = "4CDEBDCC1D707CB000351DE1"
+            BuildableName = "XTYMapViewDemo.app"
+            BlueprintName = "XTYMapViewDemo"
+            ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C196C3A1D691D7A00C37264"
-            BuildableName = "XTYMapView.app"
-            BlueprintName = "XTYMapView"
-            ReferencedContainer = "container:XTYMapView.xcodeproj">
+            BlueprintIdentifier = "4CDEBDCC1D707CB000351DE1"
+            BuildableName = "XTYMapViewDemo.app"
+            BlueprintName = "XTYMapViewDemo"
+            ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C196C3A1D691D7A00C37264"
-            BuildableName = "XTYMapView.app"
-            BlueprintName = "XTYMapView"
-            ReferencedContainer = "container:XTYMapView.xcodeproj">
+            BlueprintIdentifier = "4CDEBDCC1D707CB000351DE1"
+            BuildableName = "XTYMapViewDemo.app"
+            BlueprintName = "XTYMapViewDemo"
+            ReferencedContainer = "container:XTYMapViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
