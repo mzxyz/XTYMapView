@@ -5,7 +5,6 @@
 #Main features
 
 #Demonstration
-![image](https://github.com/HuanDay/XTYCycleScrollView/blob/master/ScrollViewTest/ScrollViewTest/scrollViewDemo.gif)
 
 #Requirements
 * iOS 7.0+ 
