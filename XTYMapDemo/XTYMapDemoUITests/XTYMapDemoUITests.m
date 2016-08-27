@@ -1,6 +1,6 @@
 //
-//  XTYMapViewDemoUITests.m
-//  XTYMapViewDemoUITests
+//  XTYMapDemoUITests.m
+//  XTYMapDemoUITests
 //
 //  Created by Michael on 16/8/27.
 //  Copyright © 2016年 Michael. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface XTYMapViewDemoUITests : XCTestCase
+@interface XTYMapDemoUITests : XCTestCase
 
 @end
 
-@implementation XTYMapViewDemoUITests
+@implementation XTYMapDemoUITests
 
 - (void)setUp {
     [super setUp];

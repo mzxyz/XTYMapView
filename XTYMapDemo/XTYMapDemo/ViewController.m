@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  XTYMapViewDemo
+//  XTYMapDemo
 //
 //  Created by Michael on 16/8/27.
 //  Copyright © 2016年 Michael. All rights reserved.
@@ -10,7 +10,6 @@
 #import "CTYColletionViewFlowlayout.h"
 #import "DemoCollectionViewCell.h"
 #import "DemoAnnotationItem.h"
-#import "XTYCoordinateItem.h"
 #import "DemoAnnotationView.h"
 #import "XTYMapView.h"
 
@@ -20,6 +19,10 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) CTYColletionViewFlowlayout *layout;
 @property (nonatomic, strong) NSArray<DemoAnnotationItem *> *annoItemList;
+
+@end
+
+@interface ViewController ()
 
 @end
 
@@ -58,6 +61,7 @@
     [self.collectionView registerClass:[DemoCollectionViewCell class] forCellWithReuseIdentifier:@"DemoCollectionViewCell"];
     [self.view addSubview:_collectionView];
     
+    //[self configAnnoItemList];
     [self configMapView];
 }
 
@@ -77,7 +81,8 @@
             annoItem.annotationClass = [DemoAnnotation class];
             annoItem.annotationInfo = item;
             
-            annoItem.didSelectCallback = ^(DemoAnnotationView *annotationView){
+            annoItem.didSelectCallback = ^(DemoAnnotationView *annotationView)
+            {
                 [wself.mapView changeMapViewCenterWith:CLLocationCoordinate2DMake(item.coordinateItem.lat, item.coordinateItem.lng) andAnimated:YES];
                 
                 NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
@@ -124,6 +129,14 @@
         id<MKAnnotation> ann = [self.mapView getAnnotationWithAnnIndex:indexPath.item];
         [self.mapView.mapView selectAnnotation:ann animated:YES];
     }
+}
+
+- (void)configAnnoItemList
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo_map" ofType:@"json"];
+    XTYJson *dataJson = [XTYJson jsonWithData:[NSData dataWithContentsOfFile:filePath]];
+    XTYJson *annoJson = [dataJson jsonForKey:@"data"];
+    self.annoItemList = [DemoAnnotationItem arrayWithArrayDictionary:(NSArray<NSDictionary *> *)annoJson.jsonObj];
 }
 
 @end
