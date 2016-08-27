@@ -15,7 +15,6 @@
 		4CAE78411D7180B3001324FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAE783F1D7180B3001324FA /* LaunchScreen.storyboard */; };
 		4CAE784C1D7180B3001324FA /* XTYMapDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE784B1D7180B3001324FA /* XTYMapDemoTests.m */; };
 		4CAE78571D7180B3001324FA /* XTYMapDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78561D7180B3001324FA /* XTYMapDemoUITests.m */; };
-		4CAE78691D71814B001324FA /* CTYColletionViewFlowlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78681D71814B001324FA /* CTYColletionViewFlowlayout.m */; };
 		4CAE786E1D718155001324FA /* XTYJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE786B1D718155001324FA /* XTYJson.m */; };
 		4CAE786F1D718155001324FA /* XTYModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE786D1D718155001324FA /* XTYModelItem.m */; };
 		4CAE78781D718160001324FA /* CLLocation+XTYAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78711D718160001324FA /* CLLocation+XTYAddition.m */; };
@@ -25,7 +24,12 @@
 		4CAE78831D7181DB001324FA /* demo_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAE787C1D7181DB001324FA /* demo_map.json */; };
 		4CAE78841D7181DB001324FA /* DemoAnnotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE787E1D7181DB001324FA /* DemoAnnotationItem.m */; };
 		4CAE78851D7181DB001324FA /* DemoAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78801D7181DB001324FA /* DemoAnnotationView.m */; };
-		4CAE78861D7181DB001324FA /* DemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78821D7181DB001324FA /* DemoCollectionViewCell.m */; };
+		4CAE78941D719856001324FA /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE788C1D719856001324FA /* TAAbstractDotView.m */; };
+		4CAE78951D719856001324FA /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE788E1D719856001324FA /* TAAnimatedDotView.m */; };
+		4CAE78961D719856001324FA /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78901D719856001324FA /* TADotView.m */; };
+		4CAE78971D719856001324FA /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78921D719856001324FA /* TAPageControl.m */; };
+		4CAE789B1D719865001324FA /* XTYCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE78981D719865001324FA /* XTYCycleCollectionViewCell.m */; };
+		4CAE789C1D719865001324FA /* XTYCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE789A1D719865001324FA /* XTYCycleScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +66,6 @@
 		4CAE78521D7180B3001324FA /* XTYMapDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTYMapDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAE78561D7180B3001324FA /* XTYMapDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTYMapDemoUITests.m; sourceTree = "<group>"; };
 		4CAE78581D7180B3001324FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CAE78671D71814B001324FA /* CTYColletionViewFlowlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTYColletionViewFlowlayout.h; sourceTree = "<group>"; };
-		4CAE78681D71814B001324FA /* CTYColletionViewFlowlayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTYColletionViewFlowlayout.m; sourceTree = "<group>"; };
 		4CAE786A1D718155001324FA /* XTYJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYJson.h; path = XTYModel/XTYJson.h; sourceTree = SOURCE_ROOT; };
 		4CAE786B1D718155001324FA /* XTYJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYJson.m; path = XTYModel/XTYJson.m; sourceTree = SOURCE_ROOT; };
 		4CAE786C1D718155001324FA /* XTYModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYModelItem.h; path = XTYModel/XTYModelItem.h; sourceTree = SOURCE_ROOT; };
@@ -81,8 +83,18 @@
 		4CAE787E1D7181DB001324FA /* DemoAnnotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotationItem.m; sourceTree = "<group>"; };
 		4CAE787F1D7181DB001324FA /* DemoAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAnnotationView.h; sourceTree = "<group>"; };
 		4CAE78801D7181DB001324FA /* DemoAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotationView.m; sourceTree = "<group>"; };
-		4CAE78811D7181DB001324FA /* DemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewCell.h; sourceTree = "<group>"; };
-		4CAE78821D7181DB001324FA /* DemoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewCell.m; sourceTree = "<group>"; };
+		4CAE788B1D719856001324FA /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		4CAE788C1D719856001324FA /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		4CAE788D1D719856001324FA /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		4CAE788E1D719856001324FA /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		4CAE788F1D719856001324FA /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		4CAE78901D719856001324FA /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		4CAE78911D719856001324FA /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		4CAE78921D719856001324FA /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		4CAE78931D719856001324FA /* XTYCycleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYCycleCollectionViewCell.h; path = XTYScrollView/XTYCycleCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		4CAE78981D719865001324FA /* XTYCycleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYCycleCollectionViewCell.m; path = XTYScrollView/XTYCycleCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		4CAE78991D719865001324FA /* XTYCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYCycleScrollView.h; path = XTYScrollView/XTYCycleScrollView.h; sourceTree = SOURCE_ROOT; };
+		4CAE789A1D719865001324FA /* XTYCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYCycleScrollView.m; path = XTYScrollView/XTYCycleScrollView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +145,7 @@
 		4CAE78301D7180B3001324FA /* XTYMapDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4CAE78661D718131001324FA /* flowlayout */,
+				4CAE78891D719845001324FA /* CycleScrollView */,
 				4CAE78651D718127001324FA /* XTYModel */,
 				4CAE78641D71811C001324FA /* XTYMapView */,
 				4CAE78881D718207001324FA /* annotaionView */,
@@ -203,15 +215,6 @@
 			name = XTYModel;
 			sourceTree = "<group>";
 		};
-		4CAE78661D718131001324FA /* flowlayout */ = {
-			isa = PBXGroup;
-			children = (
-				4CAE78671D71814B001324FA /* CTYColletionViewFlowlayout.h */,
-				4CAE78681D71814B001324FA /* CTYColletionViewFlowlayout.m */,
-			);
-			name = flowlayout;
-			sourceTree = "<group>";
-		};
 		4CAE78881D718207001324FA /* annotaionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,11 +222,37 @@
 				4CAE787E1D7181DB001324FA /* DemoAnnotationItem.m */,
 				4CAE787F1D7181DB001324FA /* DemoAnnotationView.h */,
 				4CAE78801D7181DB001324FA /* DemoAnnotationView.m */,
-				4CAE78811D7181DB001324FA /* DemoCollectionViewCell.h */,
-				4CAE78821D7181DB001324FA /* DemoCollectionViewCell.m */,
 			);
 			name = annotaionView;
 			sourceTree = "<group>";
+		};
+		4CAE78891D719845001324FA /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4CAE788A1D719856001324FA /* PageControl */,
+				4CAE78981D719865001324FA /* XTYCycleCollectionViewCell.m */,
+				4CAE78931D719856001324FA /* XTYCycleCollectionViewCell.h */,
+				4CAE78991D719865001324FA /* XTYCycleScrollView.h */,
+				4CAE789A1D719865001324FA /* XTYCycleScrollView.m */,
+			);
+			name = CycleScrollView;
+			sourceTree = "<group>";
+		};
+		4CAE788A1D719856001324FA /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				4CAE788B1D719856001324FA /* TAAbstractDotView.h */,
+				4CAE788C1D719856001324FA /* TAAbstractDotView.m */,
+				4CAE788D1D719856001324FA /* TAAnimatedDotView.h */,
+				4CAE788E1D719856001324FA /* TAAnimatedDotView.m */,
+				4CAE788F1D719856001324FA /* TADotView.h */,
+				4CAE78901D719856001324FA /* TADotView.m */,
+				4CAE78911D719856001324FA /* TAPageControl.h */,
+				4CAE78921D719856001324FA /* TAPageControl.m */,
+			);
+			name = PageControl;
+			path = XTYScrollView/PageControl;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -357,15 +386,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CAE78391D7180B3001324FA /* ViewController.m in Sources */,
+				4CAE78961D719856001324FA /* TADotView.m in Sources */,
+				4CAE78971D719856001324FA /* TAPageControl.m in Sources */,
+				4CAE789B1D719865001324FA /* XTYCycleCollectionViewCell.m in Sources */,
+				4CAE78941D719856001324FA /* TAAbstractDotView.m in Sources */,
 				4CAE787B1D718160001324FA /* XTYMapView.m in Sources */,
 				4CAE78851D7181DB001324FA /* DemoAnnotationView.m in Sources */,
-				4CAE78861D7181DB001324FA /* DemoCollectionViewCell.m in Sources */,
 				4CAE786E1D718155001324FA /* XTYJson.m in Sources */,
 				4CAE78791D718160001324FA /* XTYCoordinateItem.m in Sources */,
 				4CAE786F1D718155001324FA /* XTYModelItem.m in Sources */,
-				4CAE78691D71814B001324FA /* CTYColletionViewFlowlayout.m in Sources */,
 				4CAE78361D7180B3001324FA /* AppDelegate.m in Sources */,
 				4CAE78331D7180B3001324FA /* main.m in Sources */,
+				4CAE789C1D719865001324FA /* XTYCycleScrollView.m in Sources */,
+				4CAE78951D719856001324FA /* TAAnimatedDotView.m in Sources */,
 				4CAE78781D718160001324FA /* CLLocation+XTYAddition.m in Sources */,
 				4CAE78841D7181DB001324FA /* DemoAnnotationItem.m in Sources */,
 				4CAE787A1D718160001324FA /* XTYMapAnnotationItem.m in Sources */,

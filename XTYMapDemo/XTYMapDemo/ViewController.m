@@ -7,17 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "CTYColletionViewFlowlayout.h"
-#import "DemoCollectionViewCell.h"
+#import "XTYCycleScrollView.h"
 #import "DemoAnnotationItem.h"
 #import "DemoAnnotationView.h"
 #import "XTYMapView.h"
 
-@interface ViewController ()<CTYColletionViewFlowlayoutDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ViewController () <XTYCycleScrollViewDelegate>
 
 @property (nonatomic, strong) XTYMapView *mapView;
-@property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) CTYColletionViewFlowlayout *layout;
+@property (nonatomic, strong) XTYCycleScrollView *scrollView;
 @property (nonatomic, strong) NSArray<DemoAnnotationItem *> *annoItemList;
 
 @end
@@ -32,8 +30,8 @@
 #define ScreenWidth             [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight            [UIScreen mainScreen].bounds.size.height
 #define ItemWidth               (ScreenWidth-15*2-12*2)
-#define MapHeight               (ScreenHeight-110)
-#define CollectionViewHeight    110
+#define MapHeight               (ScreenHeight-150)
+#define CollectionViewHeight    150
 #define ItemViewHight           90
 
 - (void)viewDidLoad
@@ -44,34 +42,26 @@
     self.mapView = [[XTYMapView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, MapHeight)];
     [self.view addSubview:self.mapView];
     
-    self.layout = [[CTYColletionViewFlowlayout alloc] init];
-    self.layout.minimumLineSpacing = 12;
-    self.layout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15);
-    self.layout.itemSize = CGSizeMake(ItemWidth, ItemViewHight);
-    self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
-    self.collectionView =
-    [[UICollectionView alloc] initWithFrame:CGRectMake(0, MapHeight, ScreenWidth, CollectionViewHeight) collectionViewLayout:self.layout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.layout.delegate = self;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-    [self.collectionView registerClass:[DemoCollectionViewCell class] forCellWithReuseIdentifier:@"DemoCollectionViewCell"];
-    [self.view addSubview:_collectionView];
+    self.scrollView = [[XTYCycleScrollView alloc] initWithFrame:(CGRect){0, MapHeight, ScreenWidth, CollectionViewHeight}
+                                                         target:self
+                                                       dotColor:[UIColor lightGrayColor]
+                                                   infiniteLoop:YES];
+    self.scrollView.autoScrollTimeInterval = 1;
+    self.scrollView.showPageControl = NO;
+    [self.view addSubview:self.scrollView];
     
     [self configAnnoItemList];
-    [self configMapView];
+    [self configViews];
 }
 
-- (void)configMapView
+- (void)configViews
 {
     if (self.annoItemList.count == 0) return;
     
+    WEAKREF(self);
     NSInteger i = 0;
     NSMutableArray *items = [NSMutableArray array];
-    WEAKREF(self);
+    NSMutableArray *imageListM = [NSMutableArray array];
     for (DemoAnnotationItem *item in self.annoItemList)
     {
         if (item.lat!=0 && item.lng!=0)
@@ -84,50 +74,28 @@
             annoItem.didSelectCallback = ^(DemoAnnotationView *annotationView)
             {
                 [wself.mapView changeMapViewCenterWith:CLLocationCoordinate2DMake(item.lat, item.lng) andAnimated:YES];
-                
-                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-                [wself.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
             };
             
             [items addObject:annoItem];
             
             i++;
         }
+        
+        UIImage *image = [UIImage imageNamed:item.imageName];
+        [imageListM addObject:image];
     }
     
     [self.mapView setUpAnnotationItemList:items];
-    [self collectionView:self.collectionView didScrollToCellAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
-    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
     [self.mapView showAllAnnotationAnimated:YES];
+    [self.scrollView configScrollViewWithItemList:imageListM];
 }
 
-#pragma mark -- CollectionDataSource
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+#pragma mark -- XTYCycleScrollViewDelegate
+- (void)cycleScrollView:(XTYCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index
 {
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.annoItemList.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    DemoAnnotationItem *item = self.annoItemList[indexPath.item];
-    
-    DemoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DemoCollectionViewCell" forIndexPath:indexPath];
-    
-    return cell;
-}
-
-#pragma mark -- CollectionDelegate
-- (void)collectionView:(UICollectionView *)collectionView didScrollToCellAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.item<self.annoItemList.count)
+    if (index < self.annoItemList.count)
     {
-        [collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
-        id<MKAnnotation> ann = [self.mapView getAnnotationWithAnnIndex:indexPath.item];
+        id<MKAnnotation> ann = [self.mapView getAnnotationWithAnnIndex:index];
         [self.mapView.mapView selectAnnotation:ann animated:YES];
     }
 }
