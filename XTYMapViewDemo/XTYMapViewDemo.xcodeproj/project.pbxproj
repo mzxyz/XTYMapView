@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4CDEBDD21D707CB000351DE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBDD11D707CB000351DE1 /* main.m */; };
 		4CDEBDD51D707CB000351DE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBDD41D707CB000351DE1 /* AppDelegate.m */; };
-		4CDEBDD81D707CB000351DE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBDD71D707CB000351DE1 /* ViewController.m */; };
 		4CDEBDDB1D707CB000351DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDEBDD91D707CB000351DE1 /* Main.storyboard */; };
 		4CDEBDDD1D707CB000351DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDEBDDC1D707CB000351DE1 /* Assets.xcassets */; };
 		4CDEBDE01D707CB000351DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDEBDDE1D707CB000351DE1 /* LaunchScreen.storyboard */; };
@@ -19,12 +18,12 @@
 		4CDEBE0D1D707CCB00351DE1 /* XTYCoordinateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE071D707CCB00351DE1 /* XTYCoordinateItem.m */; };
 		4CDEBE0E1D707CCB00351DE1 /* XTYMapAnnotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE091D707CCB00351DE1 /* XTYMapAnnotationItem.m */; };
 		4CDEBE0F1D707CCB00351DE1 /* XTYMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE0B1D707CCB00351DE1 /* XTYMapView.m */; };
-		4CDEBE141D714A7F00351DE1 /* DemoAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE131D714A7F00351DE1 /* DemoAnnotationView.m */; };
-		4CDEBE171D714ACC00351DE1 /* DemoAnnotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE161D714ACC00351DE1 /* DemoAnnotationItem.m */; };
 		4CDEBE1D1D714C1600351DE1 /* XTYJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE1A1D714C1600351DE1 /* XTYJson.m */; };
 		4CDEBE1E1D714C1600351DE1 /* XTYModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE1C1D714C1600351DE1 /* XTYModelItem.m */; };
-		4CDEBE221D71532500351DE1 /* CTYColletionViewFlowlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE211D71532500351DE1 /* CTYColletionViewFlowlayout.m */; };
-		4CDEBE251D7155FB00351DE1 /* DemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE241D7155FB00351DE1 /* DemoCollectionViewCell.m */; };
+		4CDEBE2A1D715AA900351DE1 /* DemoAnnotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE271D715AA900351DE1 /* DemoAnnotationItem.m */; };
+		4CDEBE2B1D715AA900351DE1 /* DemoAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE291D715AA900351DE1 /* DemoAnnotationView.m */; };
+		4CDEBE301D715AC000351DE1 /* CTYColletionViewFlowlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE2D1D715AC000351DE1 /* CTYColletionViewFlowlayout.m */; };
+		4CDEBE311D715AC000351DE1 /* DemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEBE2F1D715AC000351DE1 /* DemoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +48,6 @@
 		4CDEBDD11D707CB000351DE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CDEBDD31D707CB000351DE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CDEBDD41D707CB000351DE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4CDEBDD61D707CB000351DE1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4CDEBDD71D707CB000351DE1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4CDEBDDA1D707CB000351DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CDEBDDC1D707CB000351DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CDEBDDF1D707CB000351DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,18 +66,18 @@
 		4CDEBE091D707CCB00351DE1 /* XTYMapAnnotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYMapAnnotationItem.m; path = ../MapView/XTYMapAnnotationItem.m; sourceTree = "<group>"; };
 		4CDEBE0A1D707CCB00351DE1 /* XTYMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYMapView.h; path = ../MapView/XTYMapView.h; sourceTree = "<group>"; };
 		4CDEBE0B1D707CCB00351DE1 /* XTYMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYMapView.m; path = ../MapView/XTYMapView.m; sourceTree = "<group>"; };
-		4CDEBE121D714A7F00351DE1 /* DemoAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAnnotationView.h; sourceTree = "<group>"; };
-		4CDEBE131D714A7F00351DE1 /* DemoAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotationView.m; sourceTree = "<group>"; };
-		4CDEBE151D714ACC00351DE1 /* DemoAnnotationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAnnotationItem.h; sourceTree = "<group>"; };
-		4CDEBE161D714ACC00351DE1 /* DemoAnnotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotationItem.m; sourceTree = "<group>"; };
 		4CDEBE191D714C1600351DE1 /* XTYJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYJson.h; path = XTYModel/XTYJson.h; sourceTree = SOURCE_ROOT; };
 		4CDEBE1A1D714C1600351DE1 /* XTYJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYJson.m; path = XTYModel/XTYJson.m; sourceTree = SOURCE_ROOT; };
 		4CDEBE1B1D714C1600351DE1 /* XTYModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTYModelItem.h; path = XTYModel/XTYModelItem.h; sourceTree = SOURCE_ROOT; };
 		4CDEBE1C1D714C1600351DE1 /* XTYModelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTYModelItem.m; path = XTYModel/XTYModelItem.m; sourceTree = SOURCE_ROOT; };
-		4CDEBE201D71532500351DE1 /* CTYColletionViewFlowlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTYColletionViewFlowlayout.h; sourceTree = "<group>"; };
-		4CDEBE211D71532500351DE1 /* CTYColletionViewFlowlayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTYColletionViewFlowlayout.m; sourceTree = "<group>"; };
-		4CDEBE231D7155FB00351DE1 /* DemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewCell.h; sourceTree = "<group>"; };
-		4CDEBE241D7155FB00351DE1 /* DemoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewCell.m; sourceTree = "<group>"; };
+		4CDEBE261D715AA900351DE1 /* DemoAnnotationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoAnnotationItem.h; path = ../../DemoAnnotationItem.h; sourceTree = "<group>"; };
+		4CDEBE271D715AA900351DE1 /* DemoAnnotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoAnnotationItem.m; path = ../../DemoAnnotationItem.m; sourceTree = "<group>"; };
+		4CDEBE281D715AA900351DE1 /* DemoAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoAnnotationView.h; path = ../../DemoAnnotationView.h; sourceTree = "<group>"; };
+		4CDEBE291D715AA900351DE1 /* DemoAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoAnnotationView.m; path = ../../DemoAnnotationView.m; sourceTree = "<group>"; };
+		4CDEBE2C1D715AC000351DE1 /* CTYColletionViewFlowlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTYColletionViewFlowlayout.h; path = ../../CTYColletionViewFlowlayout.h; sourceTree = "<group>"; };
+		4CDEBE2D1D715AC000351DE1 /* CTYColletionViewFlowlayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTYColletionViewFlowlayout.m; path = ../../CTYColletionViewFlowlayout.m; sourceTree = "<group>"; };
+		4CDEBE2E1D715AC000351DE1 /* DemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoCollectionViewCell.h; path = ../../DemoCollectionViewCell.h; sourceTree = "<group>"; };
+		4CDEBE2F1D715AC000351DE1 /* DemoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoCollectionViewCell.m; path = ../../DemoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,13 +129,11 @@
 		4CDEBDCF1D707CB000351DE1 /* XTYMapViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4CDEBE1F1D7152F300351DE1 /* XTYCollectionViewFlowlayout */,
+				4CDEBE2E1D715AC000351DE1 /* DemoCollectionViewCell.h */,
+				4CDEBE2F1D715AC000351DE1 /* DemoCollectionViewCell.m */,
 				4CDEBDD31D707CB000351DE1 /* AppDelegate.h */,
 				4CDEBDD41D707CB000351DE1 /* AppDelegate.m */,
-				4CDEBDD61D707CB000351DE1 /* ViewController.h */,
-				4CDEBDD71D707CB000351DE1 /* ViewController.m */,
-				4CDEBE231D7155FB00351DE1 /* DemoCollectionViewCell.h */,
-				4CDEBE241D7155FB00351DE1 /* DemoCollectionViewCell.m */,
+				4CDEBE1F1D7152F300351DE1 /* XTYCollectionViewFlowlayout */,
 				4CDEBE101D714A0500351DE1 /* AnnotationView */,
 				4CDEBE181D714C0600351DE1 /* XTYModel */,
 				4CDEBE111D714A1100351DE1 /* attach */,
@@ -191,10 +186,10 @@
 		4CDEBE101D714A0500351DE1 /* AnnotationView */ = {
 			isa = PBXGroup;
 			children = (
-				4CDEBE121D714A7F00351DE1 /* DemoAnnotationView.h */,
-				4CDEBE131D714A7F00351DE1 /* DemoAnnotationView.m */,
-				4CDEBE151D714ACC00351DE1 /* DemoAnnotationItem.h */,
-				4CDEBE161D714ACC00351DE1 /* DemoAnnotationItem.m */,
+				4CDEBE261D715AA900351DE1 /* DemoAnnotationItem.h */,
+				4CDEBE271D715AA900351DE1 /* DemoAnnotationItem.m */,
+				4CDEBE281D715AA900351DE1 /* DemoAnnotationView.h */,
+				4CDEBE291D715AA900351DE1 /* DemoAnnotationView.m */,
 			);
 			name = AnnotationView;
 			sourceTree = "<group>";
@@ -224,8 +219,8 @@
 		4CDEBE1F1D7152F300351DE1 /* XTYCollectionViewFlowlayout */ = {
 			isa = PBXGroup;
 			children = (
-				4CDEBE201D71532500351DE1 /* CTYColletionViewFlowlayout.h */,
-				4CDEBE211D71532500351DE1 /* CTYColletionViewFlowlayout.m */,
+				4CDEBE2C1D715AC000351DE1 /* CTYColletionViewFlowlayout.h */,
+				4CDEBE2D1D715AC000351DE1 /* CTYColletionViewFlowlayout.m */,
 			);
 			name = XTYCollectionViewFlowlayout;
 			sourceTree = "<group>";
@@ -360,14 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CDEBDD81D707CB000351DE1 /* ViewController.m in Sources */,
-				4CDEBE221D71532500351DE1 /* CTYColletionViewFlowlayout.m in Sources */,
+				4CDEBE301D715AC000351DE1 /* CTYColletionViewFlowlayout.m in Sources */,
 				4CDEBE1D1D714C1600351DE1 /* XTYJson.m in Sources */,
-				4CDEBE251D7155FB00351DE1 /* DemoCollectionViewCell.m in Sources */,
+				4CDEBE311D715AC000351DE1 /* DemoCollectionViewCell.m in Sources */,
 				4CDEBDD51D707CB000351DE1 /* AppDelegate.m in Sources */,
-				4CDEBE141D714A7F00351DE1 /* DemoAnnotationView.m in Sources */,
 				4CDEBE1E1D714C1600351DE1 /* XTYModelItem.m in Sources */,
-				4CDEBE171D714ACC00351DE1 /* DemoAnnotationItem.m in Sources */,
+				4CDEBE2A1D715AA900351DE1 /* DemoAnnotationItem.m in Sources */,
+				4CDEBE2B1D715AA900351DE1 /* DemoAnnotationView.m in Sources */,
 				4CDEBE0E1D707CCB00351DE1 /* XTYMapAnnotationItem.m in Sources */,
 				4CDEBE0D1D707CCB00351DE1 /* XTYCoordinateItem.m in Sources */,
 				4CDEBDD21D707CB000351DE1 /* main.m in Sources */,
@@ -596,6 +590,7 @@
 				4CDEBDFC1D707CB100351DE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CDEBDFD1D707CB100351DE1 /* Build configuration list for PBXNativeTarget "XTYMapViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -604,6 +599,7 @@
 				4CDEBDFF1D707CB100351DE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CDEBE001D707CB100351DE1 /* Build configuration list for PBXNativeTarget "XTYMapViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +608,7 @@
 				4CDEBE021D707CB100351DE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
