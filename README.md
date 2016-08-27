@@ -7,7 +7,7 @@ XTYMapView is a simple and easy to add annotation mapView for iOS. If you are di
 - Not only support normal annotation, but also provide APIs to add overlay annotation.
 
 #Demonstration
-![image](https://github.com/HuanDay/XTYCycleScrollView/blob/master/ScrollViewTest/ScrollViewTest/scrollViewDemo.gif)
+![image](https://github.com/HuanDay/XTYMapView/blob/master/XTYMapDemo/XTYMapDemo/mapViewDemo.gif)
 
 #Requirements
 * iOS 7.0+ 
