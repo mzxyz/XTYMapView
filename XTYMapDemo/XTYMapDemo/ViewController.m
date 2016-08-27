@@ -32,7 +32,7 @@
 #define ScreenWidth             [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight            [UIScreen mainScreen].bounds.size.height
 #define ItemWidth               (ScreenWidth-15*2-12*2)
-#define MapHeight               (ScreenHeight-64-110)
+#define MapHeight               (ScreenHeight-110)
 #define CollectionViewHeight    110
 #define ItemViewHight           90
 
@@ -41,7 +41,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.mapView = [[XTYMapView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, MapHeight)];
+    self.mapView = [[XTYMapView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, MapHeight)];
     [self.view addSubview:self.mapView];
     
     self.layout = [[CTYColletionViewFlowlayout alloc] init];
@@ -51,7 +51,7 @@
     self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     self.collectionView =
-    [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64+MapHeight, ScreenWidth, CollectionViewHeight) collectionViewLayout:self.layout];
+    [[UICollectionView alloc] initWithFrame:CGRectMake(0, MapHeight, ScreenWidth, CollectionViewHeight) collectionViewLayout:self.layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.layout.delegate = self;
@@ -61,7 +61,7 @@
     [self.collectionView registerClass:[DemoCollectionViewCell class] forCellWithReuseIdentifier:@"DemoCollectionViewCell"];
     [self.view addSubview:_collectionView];
     
-    //[self configAnnoItemList];
+    [self configAnnoItemList];
     [self configMapView];
 }
 
@@ -74,7 +74,7 @@
     WEAKREF(self);
     for (DemoAnnotationItem *item in self.annoItemList)
     {
-        if (item.coordinateItem.lat!=0 && item.coordinateItem.lng!=0)
+        if (item.lat!=0 && item.lng!=0)
         {
             XTYMapAnnotationItem *annoItem = [[XTYMapAnnotationItem alloc] init];
             annoItem.annotationViewClass = [DemoAnnotationView class];
@@ -83,12 +83,13 @@
             
             annoItem.didSelectCallback = ^(DemoAnnotationView *annotationView)
             {
-                [wself.mapView changeMapViewCenterWith:CLLocationCoordinate2DMake(item.coordinateItem.lat, item.coordinateItem.lng) andAnimated:YES];
+                [wself.mapView changeMapViewCenterWith:CLLocationCoordinate2DMake(item.lat, item.lng) andAnimated:YES];
                 
                 NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
                 [wself.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
             };
-            [items addObject:item];
+            
+            [items addObject:annoItem];
             
             i++;
         }
@@ -136,7 +137,15 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demo_map" ofType:@"json"];
     XTYJson *dataJson = [XTYJson jsonWithData:[NSData dataWithContentsOfFile:filePath]];
     XTYJson *annoJson = [dataJson jsonForKey:@"data"];
-    self.annoItemList = [DemoAnnotationItem arrayWithArrayDictionary:(NSArray<NSDictionary *> *)annoJson.jsonObj];
+    
+    __block NSMutableArray *annoListM = [NSMutableArray array];
+    for (NSInteger i=0; i<annoJson.count; i++)
+    {
+        DemoAnnotationItem *item = [[DemoAnnotationItem alloc] initWithJson:[annoJson jsonAtIndex:i]];
+        [annoListM addObject:item];
+    }
+    
+    self.annoItemList = [annoListM copy];    
 }
 
 @end

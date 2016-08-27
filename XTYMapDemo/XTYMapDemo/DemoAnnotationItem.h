@@ -10,17 +10,11 @@
 #import "XTYModelItem.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface DemoCoordinateItem : XTYModelItem
-
-@property (nonatomic, assign) CLLocationDegrees lat;
-@property (nonatomic, assign) CLLocationDegrees lng;
-
-@end
-
 @interface DemoAnnotationItem : XTYModelItem
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *imageName;
-@property (nonatomic, strong) DemoCoordinateItem *coordinateItem;
+@property (nonatomic, assign) CLLocationDegrees lat;
+@property (nonatomic, assign) CLLocationDegrees lng;
 
 @end

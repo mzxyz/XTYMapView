@@ -3,56 +3,38 @@
      {
      "title":"lufei",
      "imageName":"lufei",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+     "lat":-36.876207,
+     "lng":174.745564,
      },
      {
      "title":"solong",
      "imageName":"solong",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+        "lat":-36.906207,
+        "lng":174.735564,
      },
      {
      "title":"xiangji",
      "imageName":"xiangji",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+        "lat":-36.666207,
+        "lng":174.645564,
      },
      {
      "title":"namei",
      "imageName":"namei",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+        "lat":-36.776207,
+        "lng":174.745564,
      },
      {
      "title":"luobin",
      "imageName":"luobin",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+        "lat":-36.736207,
+        "lng":174.755564,
      },
      {
      "title":"qiaoba",
      "imageName":"qiaoba",
-     "coordinateItem":
-     {
-     "lat":0,
-     "lng":0,
-     },
+        "lat":-36.856207,
+        "lng":174.755564,
      },
     ]
 }

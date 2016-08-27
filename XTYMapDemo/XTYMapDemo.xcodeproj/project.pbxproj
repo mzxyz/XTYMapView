@@ -143,6 +143,7 @@
 				4CAE78381D7180B3001324FA /* ViewController.m */,
 				4CAE783A1D7180B3001324FA /* Main.storyboard */,
 				4CAE783D1D7180B3001324FA /* Assets.xcassets */,
+				4CAE787C1D7181DB001324FA /* demo_map.json */,
 				4CAE783F1D7180B3001324FA /* LaunchScreen.storyboard */,
 				4CAE78421D7180B3001324FA /* Info.plist */,
 				4CAE78311D7180B3001324FA /* Supporting Files */,
@@ -179,7 +180,6 @@
 		4CAE78641D71811C001324FA /* XTYMapView */ = {
 			isa = PBXGroup;
 			children = (
-				4CAE787C1D7181DB001324FA /* demo_map.json */,
 				4CAE78701D718160001324FA /* CLLocation+XTYAddition.h */,
 				4CAE78711D718160001324FA /* CLLocation+XTYAddition.m */,
 				4CAE78721D718160001324FA /* XTYCoordinateItem.h */,

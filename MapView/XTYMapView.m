@@ -309,11 +309,15 @@
 #pragma mark - get annotation instance
 - (id<MKAnnotation>)getAnnotationWithAnnIndex:(XTYMapAnnIndex)index
 {
+    if (self.annotationArrs.count == 0) return nil;
+    
     return self.annotationArrs[index];
 }
 
 - (id<MKOverlay>)getOverlayWithAnnIndex:(XTYMapOverIndex)index
 {
+    if (self.overlayArrs.count == 0) return nil;
+    
     return self.overlayArrs[index];
 }
 
