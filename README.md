@@ -1,10 +1,13 @@
 # XTYMapView
-  
+XTYMapView is a simple and easy to add annotation mapView for iOS. If you are displaying lots of annotations on the map and needing the the annotationView be more reusable , this class is made for you.
 
-
-#Main features
+#Main Features
+- Fast and easy to add annotation.
+- All  MKMapViewDelegate method has corresponding block call back for each annotationView.
+- Not only support normal annotation, but also provide APIs to add overlay annotation.
 
 #Demonstration
+![image](https://github.com/HuanDay/XTYCycleScrollView/blob/master/ScrollViewTest/ScrollViewTest/scrollViewDemo.gif)
 
 #Requirements
 * iOS 7.0+ 
@@ -38,7 +41,7 @@
 ```
 
 ##XTYMapView Method
-XTYMapView provides various methods to add annotations to mapView and use call back properties to deliver selected event.  It is easy to change the center and scale of the mapView.
+XTYMapView provides various methods to add annotations to mapView and use call back properties to deliver selected event.  It is easy to change the center and scales of the mapView.
 
 ```
 /**get the apple mapView with this readonly mapView*/
@@ -78,9 +81,87 @@ XTYMapView provides various methods to add annotations to mapView and use call b
 ```
 
 #Usage
-It is very easy to use in your program.
+In this demo, we import `XTYModel` to process json data and `XTYCycleScrollView` to present the effect of  `XTYMapView` .
+
+##AnnotationView
+Just show the methods,  looking for the details in XTYMapViewDemo files. 
 
 ```
+@interface DemoAnnotation : NSObject<MKAnnotation>
+
+@property (nonatomic, strong) DemoAnnotationItem *info;
+
+@end
+
+@interface DemoAnnotationView : MKAnnotationView
+@end
+
+@implementation DemoAnnotation
+
+- (CLLocationCoordinate2D)coordinate
+{
+    return CLLocationCoordinate2DMake(self.info.lat, self.info.lng);
+}
+
+@end
+
+
+@interface DemoAnnotationView ()
+
+@property (nonatomic, strong) UIButton *imageBtn;
+@property (nonatomic, strong) UIButton *titleBtn;
+
+@end
+
+@implementation DemoAnnotationView
+
+- (id)initWithAnnotation:(id<MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
+{
+	self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+}
+
+- (void)setAnnotation:(id<MKAnnotation>)annotation
+{
+	[super setAnnotation:annotation];
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+}
+```
+
+##Configure MapView
+First init and configure XTYMapAnnotationItem, than set the item list to XTYMapView and show all the annotations. 
+
+```
+    WEAKREF(self);
+    NSInteger i = 0;
+    NSMutableArray *items = [NSMutableArray array];
+    NSMutableArray *imageListM = [NSMutableArray array];
+    for (DemoAnnotationItem *item in self.annoItemList)
+    {
+        if (item.lat!=0 && item.lng!=0)
+        {
+            XTYMapAnnotationItem *annoItem = [[XTYMapAnnotationItem alloc] init];
+            annoItem.annotationViewClass = [DemoAnnotationView class];
+            annoItem.annotationClass = [DemoAnnotation class];
+            annoItem.annotationInfo = item;
+            
+            annoItem.didSelectCallback = ^(DemoAnnotationView *annotationView)
+            {
+                [wself.mapView changeMapViewCenterWith:CLLocationCoordinate2DMake(item.lat, item.lng) andAnimated:YES];
+            };
+            
+            [items addObject:annoItem];
+            
+            i++;
+        }
+    }
+    
+    [self.mapView setUpAnnotationItemList:items];
+    [self.mapView showAllAnnotationAnimated:YES];
+
 ```
 
 #LICENSE
