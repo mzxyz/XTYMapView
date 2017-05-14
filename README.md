@@ -1,24 +1,24 @@
 # XTYMapView
 XTYMapView is a simple and easy to add annotation mapView for iOS. If you are displaying lots of annotations on the map and needing the the annotationView be more reusable , this class is made for you.
 
-#Main Features
+# Main Features
 - Fast and easy to add annotation.
 - All  MKMapViewDelegate method has corresponding block call back for each annotationView.
 - Not only support normal annotation, but also provide APIs to add overlay annotation.
 
-#Demonstration
+# Demonstration
 ![image](https://github.com/HuanDay/XTYMapView/blob/master/XTYMapDemo/XTYMapDemo/mapViewDemo.gif)
 
-#Requirements
+# Requirements
 * iOS 7.0+ 
 * Xcode 7.0+
 
-#Installation
+# Installation
   * Move the `CTYMapView` into you project
   * Import `XTYMapView.h`
 
-#API
-##Annotation Item Properties
+# API
+## Annotation Item Properties
 
 ```
 @interface XTYMapAnnotationItem : NSObject
@@ -40,7 +40,7 @@ XTYMapView is a simple and easy to add annotation mapView for iOS. If you are di
 
 ```
 
-##XTYMapView Method
+## XTYMapView Method
 XTYMapView provides various methods to add annotations to mapView and use call back properties to deliver selected event.  It is easy to change the center and scales of the mapView.
 
 ```
@@ -80,10 +80,10 @@ XTYMapView provides various methods to add annotations to mapView and use call b
 
 ```
 
-#Usage
+# Usage
 In this demo, we import `XTYModel` to process json data and `XTYCycleScrollView` to present the effect of  `XTYMapView` .
 
-##AnnotationView
+## AnnotationView
 Just show the methods,  looking for the details in XTYMapViewDemo files. 
 
 ```
